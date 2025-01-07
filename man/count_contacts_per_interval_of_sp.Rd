@@ -24,8 +24,5 @@ count_contacts_per_interval_of_sp(
 This function counts the number of contacts across set intervals provided filtering beforehand by a single species.
 Results are returned as a vector suited for appending to original interval dataframe
 }
-\examples{
-cat_function()
-}
 \keyword{HK}
 \keyword{bats}
