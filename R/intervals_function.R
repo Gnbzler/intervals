@@ -35,7 +35,7 @@ count_contacts_per_interval_of_sp <- function(intervals, rufe_HKX, art, interval
   temp <- intervals %>%
     rowwise() %>%
     mutate(
-      contact_count = sum(temp_ruf$rz >= interval_start & temp_ruf$rz < interval_start + interval_length)
+      contact_count = sum(temp_ruf$time_call >= interval_start & temp_ruf$time_call < interval_start + interval_length)
     ) %>%
     ungroup()
 
