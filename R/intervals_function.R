@@ -6,12 +6,12 @@
 #' @keywords bats HK intervals
 #' @export
 cal_intervals <- function(timetable, breaks = "1 min"){
-  temp <- timetable %>%
+  intervals <- timetable %>%
     rowwise() %>%
     mutate(interval_list = list(seq(start, end, by = "1 min"))) %>%  # Zeitintervalle erstellen
     unnest(interval_list) %>%
     rename(interval_start = interval_list)
-  return(temp$interval_start)
+  return(intervals)
 }
 
 
